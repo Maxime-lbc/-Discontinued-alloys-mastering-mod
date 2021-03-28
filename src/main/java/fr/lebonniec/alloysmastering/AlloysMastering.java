@@ -1,5 +1,6 @@
 package fr.lebonniec.alloysmastering;
 
+import fr.lebonniec.alloysmastering.init.ModItems;
 import fr.lebonniec.alloysmastering.utils.References;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -17,14 +18,16 @@ public class AlloysMastering
 
         BUS.addListener(this::setup);
         BUS.addListener(this::clientSetup);
+
+        ModItems.ITEMS.register(BUS);
     }
 
-    private void setup(FMLCommonSetupEvent e)
+    private void setup(FMLCommonSetupEvent event)
     {
 
     }
 
-    private void clientSetup(FMLClientSetupEvent e)
+    private void clientSetup(FMLClientSetupEvent event)
     {
 
     }
