@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "alloysmastering:item/carbon-chunk"
+    "layer0": "alloysmastering:item/carbon/carbon-chunk"
   }
 }
