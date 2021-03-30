@@ -16,5 +16,6 @@ public class ModItems
             "carbon_chunk",
             () -> new Item(new Item.Properties()
                     .maxStackSize(64)
+                    .group(ModItemsGroups.TAB)
             ));
 }
