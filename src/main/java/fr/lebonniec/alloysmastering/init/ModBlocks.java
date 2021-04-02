@@ -1,5 +1,6 @@
 package fr.lebonniec.alloysmastering.init;
 
+
 import fr.lebonniec.alloysmastering.utils.References;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -29,11 +30,11 @@ public class ModBlocks
             ));
 
 
-    public static RegistryObject<Block> createBlock(String name, Supplier<? extends Block> supplier)
+    public static <T extends Block> RegistryObject<T> createBlock(String name, Supplier<? extends Block> supplier)
     {
 
-        RegistryObject<Block> block = BLOCKS.register(name, supplier);
+        RegistryObject<? extends Block> block = BLOCKS.register(name, supplier);
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().group(ModItemsGroups.TAB)));
-        return block;
+        return (RegistryObject<T>) block;
     }
 }

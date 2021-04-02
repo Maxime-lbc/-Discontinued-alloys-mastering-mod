@@ -1,8 +1,6 @@
 package fr.lebonniec.alloysmastering;
 
-import fr.lebonniec.alloysmastering.init.ModBlocks;
-import fr.lebonniec.alloysmastering.init.ModFeatures;
-import fr.lebonniec.alloysmastering.init.ModItems;
+import fr.lebonniec.alloysmastering.init.*;
 import fr.lebonniec.alloysmastering.utils.References;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,6 +22,7 @@ public class AlloysMastering
 
         ModItems.ITEMS.register(BUS);
         ModBlocks.BLOCKS.register(BUS);
+        ModContainers.CONTAINERS.register(BUS);
     }
 
     private void setup(FMLCommonSetupEvent event)
