@@ -17,13 +17,23 @@ public class ModItems
             () -> new Item(new Item.Properties()
                     .maxStackSize(64)
                     .group(ModItemsGroups.TAB)
-            ));
+            )
+    );
 
     public static final RegistryObject<Item> CAST_IRON_INGOT = ITEMS.register(
             "cast_iron_ingot",
             () -> new Item(new Item.Properties()
                     .maxStackSize(16)
                     .group(ModItemsGroups.TAB)
-            ));
+            )
+    );
+
+    public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register(
+            "copper_ingot",
+            () -> new Item(new Item.Properties()
+                    .maxStackSize(32)
+                    .group(ModItemsGroups.TAB)
+            )
+    );
 
 }

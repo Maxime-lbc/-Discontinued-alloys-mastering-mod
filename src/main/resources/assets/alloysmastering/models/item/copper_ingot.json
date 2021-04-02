@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "alloysmastering:item/copper/copper_ingot"
+  }
+}
