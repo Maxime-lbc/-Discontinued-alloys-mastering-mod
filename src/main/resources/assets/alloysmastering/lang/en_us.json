@@ -1,5 +1,6 @@
 {
   "itemGroup.alloysmastering": "Alloys Mastering",
   "item.alloysmastering.carbon_chunk": "Carbon Chunk",
-  "block.alloysmastering.carbon_ore": "Carbon Ore"
+  "block.alloysmastering.carbon_ore": "Carbon Ore",
+  "item.alloysmastering.cast_iron_ingot": "Cast Iron Ingot"
 }

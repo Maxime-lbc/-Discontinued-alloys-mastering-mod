@@ -18,4 +18,12 @@ public class ModItems
                     .maxStackSize(64)
                     .group(ModItemsGroups.TAB)
             ));
+
+    public static final RegistryObject<Item> CAST_IRON_INGOT = ITEMS.register(
+            "cast_iron_ingot",
+            () -> new Item(new Item.Properties()
+                    .maxStackSize(16)
+                    .group(ModItemsGroups.TAB)
+            ));
+
 }
