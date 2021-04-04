@@ -12,6 +12,9 @@ import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
+/**
+ * Class in which ore generation is set up
+ */
 public class ModFeatures
 {
 
@@ -46,4 +49,6 @@ public class ModFeatures
             generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, CARBON_ORE_FEATURE);
         }
     }
+
+
 }

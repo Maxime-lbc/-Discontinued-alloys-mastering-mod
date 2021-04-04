@@ -3,5 +3,9 @@
   "item.alloysmastering.carbon_chunk": "Carbon Chunk",
   "block.alloysmastering.carbon_ore": "Carbon Ore",
   "item.alloysmastering.cast_iron_ingot": "Cast Iron Ingot",
+  "item.alloysmastering.cast_iron_helmet": "Cast Iron Helmet",
+  "item.alloysmastering.cast_iron_chestplate": "Cast Iron Chestplate",
+  "item.alloysmastering.cast_iron_leggings": "Cast Iron Leggings",
+  "item.alloysmastering.cast_iron_boots": "Cast Iron Boots",
   "item.alloysmastering.copper_ingot" : "Copper Ingot"
 }

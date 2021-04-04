@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "alloysmastering:item/castiron/cast_iron_chestplate"
+  }
+}

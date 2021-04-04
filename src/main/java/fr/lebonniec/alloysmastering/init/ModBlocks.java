@@ -14,6 +14,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
+/**
+ * Blocks' registering class
+ */
 public class ModBlocks
 {
 

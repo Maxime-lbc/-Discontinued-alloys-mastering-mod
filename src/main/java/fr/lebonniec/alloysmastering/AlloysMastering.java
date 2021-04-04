@@ -9,6 +9,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+/**
+ * Main class of the mod
+ */
 @Mod(References.MODID)
 public class AlloysMastering
 {
@@ -22,7 +25,6 @@ public class AlloysMastering
 
         ModItems.ITEMS.register(BUS);
         ModBlocks.BLOCKS.register(BUS);
-        ModContainers.CONTAINERS.register(BUS);
     }
 
     private void setup(FMLCommonSetupEvent event)
@@ -30,6 +32,7 @@ public class AlloysMastering
         final ModFeatures modFeatures = new ModFeatures();
         modFeatures.init();
         MinecraftForge.EVENT_BUS.register(modFeatures);
+        MinecraftForge.EVENT_BUS.register(ModEvents.class);
     }
 
     private void clientSetup(FMLClientSetupEvent event)

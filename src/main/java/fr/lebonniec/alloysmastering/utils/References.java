@@ -1,5 +1,8 @@
 package fr.lebonniec.alloysmastering.utils;
 
+/**
+ * References class
+ */
 public class References
 {
 
