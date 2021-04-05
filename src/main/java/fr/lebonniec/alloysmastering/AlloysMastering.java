@@ -1,5 +1,6 @@
 package fr.lebonniec.alloysmastering;
 
+import fr.lebonniec.alloysmastering.events.CastIronArmorEffect;
 import fr.lebonniec.alloysmastering.init.*;
 import fr.lebonniec.alloysmastering.utils.References;
 import net.minecraftforge.common.MinecraftForge;
@@ -32,7 +33,7 @@ public class AlloysMastering
         final ModFeatures modFeatures = new ModFeatures();
         modFeatures.init();
         MinecraftForge.EVENT_BUS.register(modFeatures);
-        MinecraftForge.EVENT_BUS.register(ModEvents.class);
+        MinecraftForge.EVENT_BUS.register(CastIronArmorEffect.class);
     }
 
     private void clientSetup(FMLClientSetupEvent event)

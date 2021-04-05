@@ -1,20 +1,22 @@
-package fr.lebonniec.alloysmastering.init;
+package fr.lebonniec.alloysmastering.events;
 
+import fr.lebonniec.alloysmastering.init.ModItems;
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.ai.controller.MovementController;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.player.PlayerAbilities;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.eventbus.api.GenericEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import org.lwjgl.system.CallbackI;
-import sun.swing.SwingUtilities2;
 
 import java.util.ArrayList;
 
-public class ModEvents
+public class CastIronArmorEffect 
 {
     private static boolean isHelmetCastIron;
     private static boolean isChestCastIron;
@@ -88,16 +90,22 @@ public class ModEvents
             if (castIronPieces != castIronPiecesFrom){
                 castIronPiecesFrom = castIronPieces;
 
+
                 switch (castIronPieces){
                     case 0:
+                        playerEntity.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.1);
                         break;
                     case 1:
+                        playerEntity.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.09);
                         break;
                     case 2:
+                        playerEntity.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.085);
                         break;
                     case 3:
+                        playerEntity.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.080);
                         break;
                     case 4:
+                        playerEntity.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.075);
                         break;
                     default:
                         break;
