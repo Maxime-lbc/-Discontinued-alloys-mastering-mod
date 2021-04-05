@@ -18,8 +18,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 public class ModFeatures
 {
 
-    public static ConfiguredFeature<?,?> COPPER_ORE_FEATURE;
+
     public static ConfiguredFeature<?,?> CARBON_ORE_FEATURE;
+    public static ConfiguredFeature<?,?> COPPER_ORE_FEATURE;
 
     public void init()
     {
@@ -44,7 +45,7 @@ public class ModFeatures
                 ))
                         .square()
                         .range(40)
-                        .func_242731_b(10)
+                        .func_242731_b(15)
         );
     }
 
@@ -60,6 +61,7 @@ public class ModFeatures
 
         if (event.getCategory() != Biome.Category.NETHER){
             generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, CARBON_ORE_FEATURE);
+            generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, COPPER_ORE_FEATURE);
         }
     }
 
