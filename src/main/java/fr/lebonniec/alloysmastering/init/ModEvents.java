@@ -21,6 +21,7 @@ public class ModEvents
     private static boolean isFeetCastIron;
     private static ArrayList<Boolean> pieces = new ArrayList<>();
     private static int castIronPieces = 0;
+    private static int castIronPiecesFrom = -1;
 
 
     @SubscribeEvent
@@ -79,19 +80,24 @@ public class ModEvents
             }
         }
 
-        switch (castIronPieces){
-            case 1:
-                System.out.println("test");
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            default:
-                break;
+        if (castIronPieces != castIronPiecesFrom){
+            castIronPiecesFrom = castIronPieces;
+            System.out.println(castIronPieces);
+
+            switch (castIronPieces){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                default:
+                    break;
+            }
         }
+
 
 
         pieces.clear();
