@@ -18,6 +18,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 public class ModFeatures
 {
 
+    public static ConfiguredFeature<?,?> COPPER_ORE_FEATURE;
     public static ConfiguredFeature<?,?> CARBON_ORE_FEATURE;
 
     public void init()
@@ -32,6 +33,18 @@ public class ModFeatures
                 .square()
                 .range(50)
                 .func_242731_b(15)
+        );
+
+        COPPER_ORE_FEATURE = register(
+                "copper_ore.json",
+                Feature.ORE.withConfiguration(new OreFeatureConfig(
+                        OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
+                        ModBlocks.COPPER_ORE.get().getDefaultState(),
+                        4
+                ))
+                        .square()
+                        .range(40)
+                        .func_242731_b(10)
         );
     }
 

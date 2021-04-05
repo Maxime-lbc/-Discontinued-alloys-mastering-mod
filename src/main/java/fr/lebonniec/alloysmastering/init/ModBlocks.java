@@ -32,6 +32,16 @@ public class ModBlocks
                     .harvestLevel(2)
             ));
 
+    public static final RegistryObject<Block> COPPER_ORE = createBlock(
+            "copper_ore",
+            () -> new Block(AbstractBlock.Properties
+                    .create(Material.IRON)
+                    .hardnessAndResistance(6f, 15f)
+                    .harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool()
+                    .harvestLevel(2)
+            ));
+
 
     public static <T extends Block> RegistryObject<T> createBlock(String name, Supplier<? extends Block> supplier)
     {
