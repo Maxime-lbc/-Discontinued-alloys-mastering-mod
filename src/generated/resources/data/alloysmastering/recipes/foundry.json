@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    " # ",
+    "# #",
+    "XXX"
+  ],
+  "key": {
+    "#": {
+      "item": "alloysmastering:cast_iron_ingot"
+    },
+    "X": {
+      "item": "alloysmastering:cast_iron_block"
+    }
+  },
+  "result": {
+    "item": "alloysmastering:foundry"
+  }
+}

@@ -40,9 +40,47 @@ public class ModBlocks
             )
     );
 
+    public static final RegistryObject<Block> CLAY_FOUNDRY = createBlock(
+            "clay_foundry",
+            () -> new Block(AbstractBlock.Properties
+                                           .create(Material.IRON)
+                                           .hardnessAndResistance(6f,
+                                                                  15f
+                                           )
+                                           .harvestTool(ToolType.PICKAXE)
+                                           .harvestLevel(0)
+            )
+    );
+
+    public static final RegistryObject<Block> HARDENED_CLAY_FOUNDRY = createBlock(
+            "hardened_clay_foundry",
+            () -> new Block(AbstractBlock.Properties
+                                    .create(Material.IRON)
+                                    .hardnessAndResistance(6f,
+                                                           15f
+                                    )
+                                    .harvestTool(ToolType.PICKAXE)
+                                    .setRequiresTool()
+                                    .harvestLevel(1)
+            )
+    );
+
 
     public static final RegistryObject<Block> CARBON_ORE = createBlock(
             "carbon_ore",
+            () -> new Block(AbstractBlock.Properties
+                                    .create(Material.IRON)
+                                    .hardnessAndResistance(6f,
+                                                           15f
+                                    )
+                                    .harvestTool(ToolType.PICKAXE)
+                                    .setRequiresTool()
+                                    .harvestLevel(2)
+            )
+    );
+
+    public static final RegistryObject<Block> CAST_IRON_BLOCK = createBlock(
+            "cast_iron_block",
             () -> new Block(AbstractBlock.Properties
                                     .create(Material.IRON)
                                     .hardnessAndResistance(6f,
