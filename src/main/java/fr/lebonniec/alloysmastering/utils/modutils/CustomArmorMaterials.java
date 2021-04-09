@@ -13,23 +13,27 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.function.Supplier;
 
+
 /**
  * Class in which materials of armors are set up
  */
-public enum CustomArmorMaterials implements IArmorMaterial
+public enum CustomArmorMaterials
+        implements IArmorMaterial
 {
 
     CAST_IRON_ARMOR(
             References.MODID + ":cast_iron",
-            40, new int[]{5, 8, 10, 5},
-            10, SoundEvents.ITEM_ARMOR_EQUIP_IRON,
+            40,
+            new int[]{5, 8, 10, 5},
+            10,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
             .5f,
             1.0f,
-            () -> {
+            () ->
+                {
                 return Ingredient.fromItems(ModItems.CAST_IRON_INGOT.get());
-            }
+                }
     );
-
 
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
@@ -42,7 +46,9 @@ public enum CustomArmorMaterials implements IArmorMaterial
     private final float knockbackResistance;
     private final LazyValue<Ingredient> repairMaterial;
 
-    CustomArmorMaterials(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability, SoundEvent soundEvent, float toughness, float knockbackResistance, Supplier<Ingredient> repairMaterial) {
+    CustomArmorMaterials(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability, SoundEvent soundEvent, float toughness, float knockbackResistance, Supplier<Ingredient> repairMaterial)
+    {
+
         this.name = name;
         this.maxDamageFactor = maxDamageFactor;
         this.damageReductionAmountArray = damageReductionAmountArray;
@@ -53,36 +59,52 @@ public enum CustomArmorMaterials implements IArmorMaterial
         this.repairMaterial = new LazyValue<>(repairMaterial);
     }
 
-    public int getDurability(EquipmentSlotType slotIn) {
+    public int getDurability(EquipmentSlotType slotIn)
+    {
+
         return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
     }
 
-    public int getDamageReductionAmount(EquipmentSlotType slotIn) {
+    public int getDamageReductionAmount(EquipmentSlotType slotIn)
+    {
+
         return this.damageReductionAmountArray[slotIn.getIndex()];
     }
 
-    public int getEnchantability() {
+    public int getEnchantability()
+    {
+
         return this.enchantability;
     }
 
-    public SoundEvent getSoundEvent() {
+    public SoundEvent getSoundEvent()
+    {
+
         return this.soundEvent;
     }
 
-    public Ingredient getRepairMaterial() {
+    public Ingredient getRepairMaterial()
+    {
+
         return this.repairMaterial.getValue();
     }
 
     @OnlyIn(Dist.CLIENT)
-    public String getName() {
+    public String getName()
+    {
+
         return this.name;
     }
 
-    public float getToughness() {
+    public float getToughness()
+    {
+
         return this.toughness;
     }
 
-    public float getKnockbackResistance() {
+    public float getKnockbackResistance()
+    {
+
         return this.knockbackResistance;
     }
 }
