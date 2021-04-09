@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "alloysmastering:block/castiron/cast_iron_block"
+  }
+}
