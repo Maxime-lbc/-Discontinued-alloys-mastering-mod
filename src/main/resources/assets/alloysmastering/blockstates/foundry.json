@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "alloysmastering:block/foundry",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "alloysmastering:block/foundry",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "alloysmastering:block/foundry",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "alloysmastering:block/foundry",
+      "y": 0
+    }
+  }
+}
